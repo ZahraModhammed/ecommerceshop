@@ -151,7 +151,7 @@ body{
 
 /*المتنجات المميزة*/
 
-.carousel-row .col-12{
+.carousel-row>.col-12{
   padding-right: 0px;
   padding-left: 0px;
 }
@@ -229,7 +229,7 @@ body{
 
 }
 
-.custom-carousel-indicators-primary{
+ .custom-carousel-indicators-primary{
     top: 235px;
     right: 41%;
 }
@@ -250,4 +250,134 @@ body{
 #carousel-featured .carousel-control-next{
     color:#868686 ;
     font-size: 20px;
+}
+
+#store-feature{
+    box-shadow: 0 0 15px #eef0ea ;
+    position: relative;
+    top: -30px;
+    background-image: url(../images/bg_features.png);
+    background-repeat: no-repeat;
+    background-color:#fff ;
+    padding-bottom: 35px;
+    padding-top: 25px;
+    background-size: auto 60%;
+    background-position: -10px -20px;
+
+}
+   /*مقال حسوب عن المحددات*/
+#store-feature .feature>img{     
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+#store-feature .feature.feature{
+    border-right: 1px solid #eef0ea;
+}
+
+h3.custom-heading {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+ .custom-thumball{
+  border: 2px solid #eef0ea;
+  padding: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.custom-thumball:hover{
+  border-color: #53ccd7;
+}
+
+.custom-thumball h4{
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.custom-thumball .card-body{
+    padding: 9px;
+}
+
+.custom-thumball .price{
+    padding-top:10px ;
+}
+
+.price{
+    color: #53ccd7;
+}
+
+.reting{
+    color: #c2c2c2;
+}
+
+.reting .active{
+    color: #f3af41;
+}
+
+.custom-thumball .overlay{
+    position: absolute;
+    background-color: rgba(83, 204, 215, .5);
+    height: 250px;
+    width: calc(100% - 16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .3s ease;
+    
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+.custom-thumball .add-to-cart-btn{
+    background-color: #fff;
+    color: #53ccd7;
+    font-weight: bold;
+}
+
+.custom-thumball .add-to-cart-btn:hover,
+.custom-thumball .add-to-cart-btn:active,
+.custom-thumball .add-to-cart-btn:focus,
+.custom-thumball .add-to-cart-btn:active:focus,
+.custom-thumball .add-to-cart-btn:active:hover{
+    color: #000;
+    
+}
+
+.custom-thumball .sale{
+    padding: 5px 10px;
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    direction: ltr;
+}
+
+.custom-thumball .sale::before{
+    content: "-";
+}
+
+.custom-carousel-indicators>li{
+    height: 13px;
+    width: 13px;
+    margin: 2px;
+    background-color: #dbdbdb;
+}
+
+.custom-carousel-indicators>li.active{
+    background-color: #565656;
+}
+#carousel-most-sold .carousel-indicators{
+    position: static;
+}
+
+.custom-thumball img{
+    height:250px ;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
 }
