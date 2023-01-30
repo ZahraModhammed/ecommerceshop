@@ -11,4 +11,6 @@ $(document).ready(function() {
  $(".add-to-cart-btn").click(function(){
         alert("اضاف المنتج الى عربة الشراء")
  });
+
+ $("#copyright").text("جميع الحقوق محفوظة للمتجر سنة" + new Date().getFullYear());
 });
