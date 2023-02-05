@@ -155,6 +155,14 @@ module.exports = {
 
     }),
 
+    new HtmlWebpackPlugin({
+
+      filename: "checkout.html",
+
+      template: "./src/checkout.html",
+
+    }),
+
     new  MiniCssExtractPlugin ({filename: 'css/style.css'}),
 
     new OptimizeCSSAssetsPlugin({}),
