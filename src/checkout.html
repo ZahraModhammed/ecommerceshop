@@ -114,7 +114,7 @@
             <!-- قسم عرابة الشراء  -->
             <div class="row  flex-column">
                <h1 class="custom-heading">عرابة الشراء </h1> 
-                <form id="form-checkout">
+                <form id="form-checkout" action="payment.html" method="get">
                     <table class=" col-12 custom-table " >
                         <thead>
                            <th>المنتج</th>
@@ -140,6 +140,7 @@
                                 400$
                               </td>
                               <td>
+                                <input type="hidden" name="product1" value="تي شيرت رجالي من لاكوست ">
                                 <select name="quantity1" class="form-control custom-form-control quantity" data-product-quantity>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -172,7 +173,8 @@
                                 300$
                                </td>
                                <td>
-                                <select name="quantity1" class="form-control custom-form-control quantity" data-product-quantity>
+                                <input type="hidden" name="product2" value="تي شيرت أديداس">
+                                <select name="quantity2" class="form-control custom-form-control quantity" data-product-quantity>
                                     <option value="1" selected>1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -207,6 +209,7 @@
                         <span>
                             أكمال عملية الشراء 
                             <i class="fas fa-dollar-sign"></i>
+                            
                         </span>
                     </button>
                 </form>

@@ -48,7 +48,7 @@ $(document).ready(function() {
 
    function calculateTotalPrice() {
      var totalPriceForAllProducts= 0;
-
+   
      $('[data-product-info]').each(function(){
 
       var pricePerUntil = $(this).attr('data-product-price');
@@ -57,10 +57,59 @@ $(document).ready(function() {
 
       var totalPriceForProduct = pricePerUntil * quantity;
 
-      totalPriceForAllProducts = totalPriceForAllProducts + totalPriceForProduct
+      totalPriceForAllProducts = totalPriceForAllProducts +  totalPriceForProduct;
+
+
+      parent.find('.total-price-for-product').text(totalPriceForProduct + '$');
+
 
      });
+     
+    }
 
-     $('#total-price-for-all-products').text(totalPriceForAllProducts + '$')
-   }
+     
+   
+
+     var citiesByCountry = {
+		sa: ['الرياض', 'جدة'],
+		eg: ['القاهرة', 'الاسكندرية'],
+		mr: ['طنجة', 'فاس', 'مكناس', 'مراكش'],
+		jo: ['دمشق', 'الزرقاء', 'عمان'],
+		sy: ['وهرن', 'دزاير'],
+	};
+
+	$('#form-checkout select[name = "country"]').change(function () {
+
+		var country = $(this).val();
+
+		var cities = citiesByCountry[country];
+
+		$('#form-checkout select[name="city"]').empty();
+
+		$('#form-checkout select[name="city"]').append(
+			'<option disabled selected value="">اختر المدينة</option>'
+		);
+
+		cities.forEach(function (city) {
+			var newOption = $('<option></option>');
+			newOption.text(city);
+			newOption.val(city);
+			$('#form-checkout select[name="city"]').append(newOption);
+		});
+	});
+
+   $('#form-checkout input[name = "payment_methode"]').change(function(){
+     
+      var paymentMethode = $(this).val();
+      if (paymentMethode === 'on_delivery'){
+         
+         $('#credit-card-info input').prop("disabled", true);
+      } else{
+
+         $("#credit-card-info input").prop ("disabled", false);
+      }
+
+      $("#credit-card-info").toggle();
+   });
+   
 });
