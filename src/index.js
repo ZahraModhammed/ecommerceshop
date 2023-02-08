@@ -40,11 +40,11 @@ $(document).ready(function() {
       calculateTotalPrice();
  });
 
-  $('[data-remove-from-cart]').click(function(){
-     $(this).parents('[data-product-info]').remove();
-     
-     calculateTotalPrice();
-  });
+ $('[data-remove-from-cart]').click(function(){
+   $(this).parents('[data-product-info]').remove();
+   
+   
+});
 
    function calculateTotalPrice() {
      var totalPriceForAllProducts= 0;
@@ -57,10 +57,10 @@ $(document).ready(function() {
 
       var totalPriceForProduct = pricePerUntil * quantity;
 
-      totalPriceForAllProducts = totalPriceForAllProducts +  totalPriceForProduct;
+      totalPriceForAllProducts = totalPriceForAllProducts + totalPriceForProduct;
 
 
-      parent.find('.total-price-for-product').text(totalPriceForProduct + '$');
+      $('#total-price-for-all-products').text(totalPriceForAllProducts + '$');
 
 
      });
