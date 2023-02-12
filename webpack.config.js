@@ -23,7 +23,7 @@ module.exports = {
       
     },
      
-    port: 1239,
+    port: 9000,
     devMiddleware: {
 
       writeToDisk: true,
@@ -129,7 +129,7 @@ module.exports = {
 
         options: {
 
-          exposes: ['$', 'jQuery'],
+          exposes: ['$', 'jQuery',"jquery"],
 
         }
 
@@ -168,6 +168,15 @@ module.exports = {
       filename: "payment.html",
 
       template: "./src/payment.html",
+
+    }),
+
+    
+    new HtmlWebpackPlugin({
+
+      filename: "search.html",
+
+      template: "./src/search.html",
 
     }),
 
