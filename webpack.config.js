@@ -180,6 +180,14 @@ module.exports = {
 
     }),
 
+    new HtmlWebpackPlugin({
+
+      filename: "contact.html",
+
+      template: "./src/contact.html",
+
+    }),
+
     new  MiniCssExtractPlugin ({filename: 'css/style.css'}),
 
     new OptimizeCSSAssetsPlugin({}),
