@@ -18,7 +18,7 @@ module.exports = {
   devServer: {
 
     static: {
-      directory: path.join(__dirname, "/dist"),
+      directory: path.join(__dirname, "build"),
       
       
     },
@@ -29,6 +29,9 @@ module.exports = {
       writeToDisk: true,
  
    },
+
+   hot: false, 
+    liveReload: true,
 
    open:true,
  
