@@ -1,12 +1,15 @@
-import '@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.min.css';
+// import '@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.min.css';
+// import '@laylazi/bootstrap-rtl-scss/scss/bootstrap-rtl.scss';
+import './scss/style.scss';
 import './css/style.css';
 import 'jquery/dist/jquery';
 import 'popper.js/dist/popper';
 import 'webpack-jquery-ui';
 import 'webpack-jquery-ui/css';
-import 'jquery-ui-touch-punch/jquery.ui.touch-punch.min.js'
+import 'jquery-ui-touch-punch/jquery.ui.touch-punch.min.js';
 import 'bootstrap/dist/js/bootstrap';
 import '@fortawesome/fontawesome-free/js/all.min';
+
 
 
 

@@ -1,0 +1,19 @@
+@import'./variables';
+
+@mixin button-style($color){
+        color: $color !important;
+        border-color: $color !important;
+        background-color: transparent;
+        
+    
+        &:hover,
+        &:active,
+        &:focus,
+        &:active:focus,
+        &:active:hover{
+          color: darken($color, 25%) !important;
+          border-color: darken($color, 25%) !important;
+          background-color: transparent;
+        }
+       
+}
